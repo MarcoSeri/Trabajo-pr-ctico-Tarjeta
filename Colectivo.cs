@@ -11,6 +11,8 @@ namespace TP{
     
     public Boleto pagarCon(Tarjeta tarjeta){
       
+      Console.Write("Prueba");
+
       if(tarjeta.VerSaldo() >= precio){ 
         tarjeta.RestarSaldo(precio);
         return new Boleto(Linea, tarjeta.VerSaldo());
