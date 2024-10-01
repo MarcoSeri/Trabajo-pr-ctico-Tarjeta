@@ -8,12 +8,10 @@ namespace TP{
     public Colectivo(string linea){
       this.Linea = linea;
     }
-    
-    public Boleto pagarCon(Tarjeta tarjeta){
-      
-      Console.Write("Prueba");
 
-      if(tarjeta.VerSaldo() >= precio){ 
+    public Boleto pagarCon(Tarjeta tarjeta){
+
+      if(tarjeta.VerSaldo() >= (tarjeta.saldo_negativo+precio)){ 
         tarjeta.RestarSaldo(precio);
         return new Boleto(Linea, tarjeta.VerSaldo());
       }

@@ -7,6 +7,7 @@ namespace TP
         private float saldo;
         public int id;
 
+        public float saldo_negativo = -480;
         private float limite = 9900;
         private float[] montos_disponibles = { 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000 };
 
@@ -21,8 +22,16 @@ namespace TP
             {
                 if ((saldo + monto) < limite)
                 {
+                    if (saldo < 0)
+                    {
+                        saldo += monto;
+                        Console.WriteLine("Saldo adeudado descontado. Saldo Actual: " + saldo);
+                    }
+                    else 
+                    {
                     saldo += monto;
                     Console.WriteLine("Saldo Actual: " + saldo);
+                    }
                 }
                 else
                     Console.WriteLine("El monto excede el limite de la tarjeta");
