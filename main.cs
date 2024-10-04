@@ -8,7 +8,7 @@ namespace TP
         {
             Colectivo CientoDos = new Colectivo("102");
             Tarjeta tarjeta;
-            tarjeta = new Tarjeta(1974);
+            tarjeta = new MedioBoleto(1974);
             tarjeta.CargarTarjeta(2000);
             CientoDos.pagarCon(tarjeta);
             tarjeta.MostrarSaldo();

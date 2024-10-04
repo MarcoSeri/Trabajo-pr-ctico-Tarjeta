@@ -10,15 +10,23 @@ namespace TP{
     }
 
     public Boleto pagarCon(Tarjeta tarjeta){
-
-      if(tarjeta.VerSaldo() >= (tarjeta.saldo_negativo+precio)){ 
-        tarjeta.RestarSaldo(precio);
-        return new Boleto(Linea, tarjeta.VerSaldo());
+      if(tarjeta is MedioBoleto){
+        tarjeta.RestarSaldo(precio*0.5f);
       }
-      else{
-        Console.WriteLine("No tiene saldo suficiente");
-        return null; 
-      }  
+      else if(tarjeta is BoletoGratuito){
+        tarjeta.RestarSaldo(precio*0);
+      }
+      else{ 
+        if(tarjeta.VerSaldo() >= (tarjeta.saldo_negativo+precio)){ 
+          tarjeta.RestarSaldo(precio);
+          return new Boleto(Linea, tarjeta.VerSaldo());
+        }
+        else{
+          Console.WriteLine("No tiene saldo suficiente");
+          return null; 
+        }
+      }
+      return null;
     }
   }
 }
