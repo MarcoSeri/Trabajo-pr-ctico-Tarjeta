@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace TP
 {
@@ -10,6 +11,8 @@ namespace TP
         public float saldo_negativo = -480;
         private float limite = 9900;
         private float[] montos_disponibles = { 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000 };
+        public List<Boleto> historial = new List<Boleto>();
+
 
         public Tarjeta(int id)
         {
