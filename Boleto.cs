@@ -7,7 +7,7 @@ namespace TP{
     private float precio;
     private string tipoDeBoleto;
     private int id;
-    private DateTime fecha;
+    public DateTime fecha;
 
 
     public Boleto(int id,string tipo, float precio, string linea, float saldo){
