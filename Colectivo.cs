@@ -47,11 +47,21 @@ namespace TP {
         }
         return null;
       }
-
-      if (tarjeta is BoletoGratuito) {
+// revisa si hoy ya hizo 2 viajes
+      if (tarjeta is BoletoGratuito boletogratuito) {
+        if (boletogratuito.ViajesHoy < 2){
+        boletogratuito.ViajesHoy ++ ;
         boleto = new Boleto(tarjeta.id, "Boleto gratuito", 0, Linea, tarjeta.VerSaldo());
-        tarjeta.historial.Add(boleto);
+        boletogratuito.historial.Add(boleto);
         return boleto;
+        }
+        else {
+          if (tieneSaldoBN) {
+            boletogratuito.RestarSaldo(precio);
+            boleto = new Boleto(tarjeta.id, "Boleto normal", precio, Linea, tarjeta.VerSaldo());
+            boletogratuito.historial.Add(boleto);
+        }
+        }
       }
 
       if (tieneSaldoBN) {
