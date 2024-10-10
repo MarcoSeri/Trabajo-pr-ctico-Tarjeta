@@ -11,6 +11,7 @@ namespace TP
             tarjeta = new MedioBoleto(1974);
             tarjeta.CargarTarjeta(2000);
             CientoDos.pagarCon(tarjeta);
+
             
         }
     }
