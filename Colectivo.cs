@@ -32,9 +32,10 @@ namespace TP{
         } 
       }
       
-      else if(tarjeta is BoletoGratuito){
+      else if(tarjeta is BoletoGratuito && tarjeta.ViajesHoy<=2){
         precio = 0;
         tipo = "Boleto gratuito";
+        tarjeta.ViajesHoy++;  
       }
 
       else if(tieneSaldoBoletoNormal){
