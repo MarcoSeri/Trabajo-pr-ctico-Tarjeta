@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP_Colectivo", "TP_Colectivo.csproj", "{EE0A3238-F4B1-4AA5-BA02-DBCE5BC24DEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP_Colectivo_test", "..\TP_Colectivo_test\TP_Colectivo_test.csproj", "{F673EC32-C959-480F-9541-806F62EAD8CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE0A3238-F4B1-4AA5-BA02-DBCE5BC24DEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE0A3238-F4B1-4AA5-BA02-DBCE5BC24DEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE0A3238-F4B1-4AA5-BA02-DBCE5BC24DEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE0A3238-F4B1-4AA5-BA02-DBCE5BC24DEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F673EC32-C959-480F-9541-806F62EAD8CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F673EC32-C959-480F-9541-806F62EAD8CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F673EC32-C959-480F-9541-806F62EAD8CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F673EC32-C959-480F-9541-806F62EAD8CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B1E2548B-4C22-41E4-AF90-7D78DD103BEE}
+	EndGlobalSection
+EndGlobal
