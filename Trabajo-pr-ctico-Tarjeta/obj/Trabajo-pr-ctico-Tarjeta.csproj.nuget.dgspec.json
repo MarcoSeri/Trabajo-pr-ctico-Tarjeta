@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\CSharp\\Trabajo-pr-ctico-Tarjeta\\Trabajo-pr-ctico-Tarjeta.csproj": {}
+    "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\Trabajo-pr-ctico-Tarjeta\\Trabajo-pr-ctico-Tarjeta.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\CSharp\\Trabajo-pr-ctico-Tarjeta\\Trabajo-pr-ctico-Tarjeta.csproj": {
+    "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\Trabajo-pr-ctico-Tarjeta\\Trabajo-pr-ctico-Tarjeta.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\CSharp\\Trabajo-pr-ctico-Tarjeta\\Trabajo-pr-ctico-Tarjeta.csproj",
+        "projectUniqueName": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\Trabajo-pr-ctico-Tarjeta\\Trabajo-pr-ctico-Tarjeta.csproj",
         "projectName": "Trabajo-pr-ctico-Tarjeta",
-        "projectPath": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\CSharp\\Trabajo-pr-ctico-Tarjeta\\Trabajo-pr-ctico-Tarjeta.csproj",
+        "projectPath": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\Trabajo-pr-ctico-Tarjeta\\Trabajo-pr-ctico-Tarjeta.csproj",
         "packagesPath": "C:\\Users\\marcos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\CSharp\\Trabajo-pr-ctico-Tarjeta\\obj\\",
+        "outputPath": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\Trabajo-pr-ctico-Tarjeta\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\marcos\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trabajo-pr-ctico-Tarjeta", "Trabajo-pr-ctico-Tarjeta.csproj", "{30DE3121-8BF9-44B6-9432-59A719834E8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trabajo-pr-ctico-Tarjeta-test", "..\Trabajo-pr-ctico-Tarjeta-test\Trabajo-pr-ctico-Tarjeta-test.csproj", "{068954CA-FDE2-4B1E-8F3F-6A3DD11F3C7A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30DE3121-8BF9-44B6-9432-59A719834E8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30DE3121-8BF9-44B6-9432-59A719834E8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30DE3121-8BF9-44B6-9432-59A719834E8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30DE3121-8BF9-44B6-9432-59A719834E8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{068954CA-FDE2-4B1E-8F3F-6A3DD11F3C7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{068954CA-FDE2-4B1E-8F3F-6A3DD11F3C7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{068954CA-FDE2-4B1E-8F3F-6A3DD11F3C7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{068954CA-FDE2-4B1E-8F3F-6A3DD11F3C7A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {28D49A35-894E-4C7E-9014-159DD8A9A558}
+	EndGlobalSection
+EndGlobal
