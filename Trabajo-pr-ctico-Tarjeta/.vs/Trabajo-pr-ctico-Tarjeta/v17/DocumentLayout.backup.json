@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\Trabajo-pr-ctico-Tarjeta\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{30DE3121-8BF9-44B6-9432-59A719834E8A}|Trabajo-pr-ctico-Tarjeta.csproj|c:\\users\\marcos\\onedrive - telequal\\escuela\\2024\\trabajoc\\trabajo-pr-ctico-tarjeta\\colectivo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30DE3121-8BF9-44B6-9432-59A719834E8A}|Trabajo-pr-ctico-Tarjeta.csproj|solutionrelative:colectivo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{068954CA-FDE2-4B1E-8F3F-6A3DD11F3C7A}|..\\Trabajo-pr-ctico-Tarjeta-test\\Trabajo-pr-ctico-Tarjeta-test.csproj|c:\\users\\marcos\\onedrive - telequal\\escuela\\2024\\trabajoc\\trabajo-pr-ctico-tarjeta-test\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -17,28 +21,41 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Colectivo.cs",
+              "DocumentMoniker": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\Trabajo-pr-ctico-Tarjeta\\Colectivo.cs",
+              "RelativeDocumentMoniker": "Colectivo.cs",
+              "ToolTip": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\Trabajo-pr-ctico-Tarjeta\\Colectivo.cs",
+              "RelativeToolTip": "Colectivo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T19:53:38.283Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "UnitTest1.cs",
               "DocumentMoniker": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\Trabajo-pr-ctico-Tarjeta-test\\UnitTest1.cs",
               "RelativeDocumentMoniker": "..\\Trabajo-pr-ctico-Tarjeta-test\\UnitTest1.cs",
               "ToolTip": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\Trabajo-pr-ctico-Tarjeta-test\\UnitTest1.cs",
               "RelativeToolTip": "..\\Trabajo-pr-ctico-Tarjeta-test\\UnitTest1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwQAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-23T19:53:06.955Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\Trabajo-pr-ctico-Tarjeta\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
