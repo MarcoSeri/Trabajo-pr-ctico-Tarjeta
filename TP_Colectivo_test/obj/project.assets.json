@@ -998,19 +998,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\marcos\\.nuget\\packages\\": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\TP_Colectivo_test\\TP_Colectivo_test.csproj",
+      "projectUniqueName": "D:\\Francisco\\C#\\Trabajo-pr-ctico-Tarjeta\\TP_Colectivo_test\\TP_Colectivo_test.csproj",
       "projectName": "TP_Colectivo_test",
-      "projectPath": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\TP_Colectivo_test\\TP_Colectivo_test.csproj",
-      "packagesPath": "C:\\Users\\marcos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\TP_Colectivo_test\\obj\\",
+      "projectPath": "D:\\Francisco\\C#\\Trabajo-pr-ctico-Tarjeta\\TP_Colectivo_test\\TP_Colectivo_test.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "D:\\Francisco\\C#\\Trabajo-pr-ctico-Tarjeta\\TP_Colectivo_test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\marcos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1024,8 +1024,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\TP_Colectivo\\TP_Colectivo.csproj": {
-              "projectPath": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\TP_Colectivo\\TP_Colectivo.csproj"
+            "D:\\Francisco\\C#\\Trabajo-pr-ctico-Tarjeta\\TP_Colectivo\\TP_Colectivo.csproj": {
+              "projectPath": "D:\\Francisco\\C#\\Trabajo-pr-ctico-Tarjeta\\TP_Colectivo\\TP_Colectivo.csproj"
             }
           }
         }

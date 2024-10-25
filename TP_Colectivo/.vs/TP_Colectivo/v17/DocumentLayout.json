@@ -1,40 +1,40 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\TP_Colectivo\\",
+  "WorkspaceRootPath": "D:\\Francisco\\C#\\Trabajo-pr-ctico-Tarjeta\\TP_Colectivo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F673EC32-C959-480F-9541-806F62EAD8CB}|..\\TP_Colectivo_test\\TP_Colectivo_test.csproj|c:\\users\\marcos\\onedrive - telequal\\escuela\\2024\\trabajoc\\tp_colectivo_test\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EE0A3238-F4B1-4AA5-BA02-DBCE5BC24DEF}|TP_Colectivo.csproj|d:\\francisco\\c#\\trabajo-pr-ctico-tarjeta\\tp_colectivo\\tarjeta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE0A3238-F4B1-4AA5-BA02-DBCE5BC24DEF}|TP_Colectivo.csproj|solutionrelative:tarjeta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F673EC32-C959-480F-9541-806F62EAD8CB}|..\\TP_Colectivo_test\\TP_Colectivo_test.csproj|c:\\users\\marcos\\onedrive - telequal\\escuela\\2024\\trabajoc\\tp_colectivo_test\\tp_colectivo_test.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{F673EC32-C959-480F-9541-806F62EAD8CB}|..\\TP_Colectivo_test\\TP_Colectivo_test.csproj|d:\\francisco\\c#\\trabajo-pr-ctico-tarjeta\\tp_colectivo_test\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE0A3238-F4B1-4AA5-BA02-DBCE5BC24DEF}|TP_Colectivo.csproj|c:\\users\\marcos\\onedrive - telequal\\escuela\\2024\\trabajoc\\tp_colectivo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE0A3238-F4B1-4AA5-BA02-DBCE5BC24DEF}|TP_Colectivo.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE0A3238-F4B1-4AA5-BA02-DBCE5BC24DEF}|TP_Colectivo.csproj|c:\\users\\marcos\\onedrive - telequal\\escuela\\2024\\trabajoc\\tp_colectivo\\tp_colectivo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{EE0A3238-F4B1-4AA5-BA02-DBCE5BC24DEF}|TP_Colectivo.csproj|solutionrelative:tp_colectivo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE0A3238-F4B1-4AA5-BA02-DBCE5BC24DEF}|TP_Colectivo.csproj|c:\\users\\marcos\\onedrive - telequal\\escuela\\2024\\trabajoc\\tp_colectivo\\boleto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE0A3238-F4B1-4AA5-BA02-DBCE5BC24DEF}|TP_Colectivo.csproj|solutionrelative:boleto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE0A3238-F4B1-4AA5-BA02-DBCE5BC24DEF}|TP_Colectivo.csproj|c:\\users\\marcos\\onedrive - telequal\\escuela\\2024\\trabajoc\\tp_colectivo\\boletogratuito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE0A3238-F4B1-4AA5-BA02-DBCE5BC24DEF}|TP_Colectivo.csproj|solutionrelative:boletogratuito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE0A3238-F4B1-4AA5-BA02-DBCE5BC24DEF}|TP_Colectivo.csproj|c:\\users\\marcos\\onedrive - telequal\\escuela\\2024\\trabajoc\\tp_colectivo\\colectivo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EE0A3238-F4B1-4AA5-BA02-DBCE5BC24DEF}|TP_Colectivo.csproj|d:\\francisco\\c#\\trabajo-pr-ctico-tarjeta\\tp_colectivo\\colectivo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EE0A3238-F4B1-4AA5-BA02-DBCE5BC24DEF}|TP_Colectivo.csproj|solutionrelative:colectivo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE0A3238-F4B1-4AA5-BA02-DBCE5BC24DEF}|TP_Colectivo.csproj|c:\\users\\marcos\\onedrive - telequal\\escuela\\2024\\trabajoc\\tp_colectivo\\medioboleto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\TP_Colectivo_test\\TP_Colectivo_test.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE0A3238-F4B1-4AA5-BA02-DBCE5BC24DEF}|TP_Colectivo.csproj|d:\\francisco\\c#\\trabajo-pr-ctico-tarjeta\\tp_colectivo\\medioboleto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EE0A3238-F4B1-4AA5-BA02-DBCE5BC24DEF}|TP_Colectivo.csproj|solutionrelative:medioboleto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE0A3238-F4B1-4AA5-BA02-DBCE5BC24DEF}|TP_Colectivo.csproj|c:\\users\\marcos\\onedrive - telequal\\escuela\\2024\\trabajoc\\tp_colectivo\\tarjeta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE0A3238-F4B1-4AA5-BA02-DBCE5BC24DEF}|TP_Colectivo.csproj|solutionrelative:tarjeta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EE0A3238-F4B1-4AA5-BA02-DBCE5BC24DEF}|TP_Colectivo.csproj|d:\\francisco\\c#\\trabajo-pr-ctico-tarjeta\\tp_colectivo\\boletogratuito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE0A3238-F4B1-4AA5-BA02-DBCE5BC24DEF}|TP_Colectivo.csproj|solutionrelative:boletogratuito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE0A3238-F4B1-4AA5-BA02-DBCE5BC24DEF}|TP_Colectivo.csproj|d:\\francisco\\c#\\trabajo-pr-ctico-tarjeta\\tp_colectivo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE0A3238-F4B1-4AA5-BA02-DBCE5BC24DEF}|TP_Colectivo.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE0A3238-F4B1-4AA5-BA02-DBCE5BC24DEF}|TP_Colectivo.csproj|d:\\francisco\\c#\\trabajo-pr-ctico-tarjeta\\tp_colectivo\\tp_colectivo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{EE0A3238-F4B1-4AA5-BA02-DBCE5BC24DEF}|TP_Colectivo.csproj|solutionrelative:tp_colectivo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE0A3238-F4B1-4AA5-BA02-DBCE5BC24DEF}|TP_Colectivo.csproj|d:\\francisco\\c#\\trabajo-pr-ctico-tarjeta\\tp_colectivo\\boleto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE0A3238-F4B1-4AA5-BA02-DBCE5BC24DEF}|TP_Colectivo.csproj|solutionrelative:boleto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -44,41 +44,77 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TP_Colectivo_test",
-              "DocumentMoniker": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\TP_Colectivo_test\\TP_Colectivo_test.csproj",
-              "RelativeDocumentMoniker": "..\\TP_Colectivo_test\\TP_Colectivo_test.csproj",
-              "ToolTip": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\TP_Colectivo_test\\TP_Colectivo_test.csproj",
-              "RelativeToolTip": "..\\TP_Colectivo_test\\TP_Colectivo_test.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-23T22:19:28.396Z",
+              "DocumentIndex": 8,
+              "Title": "Boleto.cs",
+              "DocumentMoniker": "D:\\Francisco\\C#\\Trabajo-pr-ctico-Tarjeta\\TP_Colectivo\\Boleto.cs",
+              "RelativeDocumentMoniker": "Boleto.cs",
+              "ToolTip": "D:\\Francisco\\C#\\Trabajo-pr-ctico-Tarjeta\\TP_Colectivo\\Boleto.cs",
+              "RelativeToolTip": "Boleto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T22:16:37.55Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BoletoGratuito.cs",
+              "DocumentMoniker": "D:\\Francisco\\C#\\Trabajo-pr-ctico-Tarjeta\\TP_Colectivo\\BoletoGratuito.cs",
+              "RelativeDocumentMoniker": "BoletoGratuito.cs",
+              "ToolTip": "D:\\Francisco\\C#\\Trabajo-pr-ctico-Tarjeta\\TP_Colectivo\\BoletoGratuito.cs",
+              "RelativeToolTip": "BoletoGratuito.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T22:17:27.717Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "D:\\Francisco\\C#\\Trabajo-pr-ctico-Tarjeta\\TP_Colectivo_test\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "..\\TP_Colectivo_test\\UnitTest1.cs",
+              "ToolTip": "D:\\Francisco\\C#\\Trabajo-pr-ctico-Tarjeta\\TP_Colectivo_test\\UnitTest1.cs",
+              "RelativeToolTip": "..\\TP_Colectivo_test\\UnitTest1.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAowEUAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T22:44:29.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Tarjeta.cs",
-              "DocumentMoniker": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\TP_Colectivo\\Tarjeta.cs",
+              "DocumentMoniker": "D:\\Francisco\\C#\\Trabajo-pr-ctico-Tarjeta\\TP_Colectivo\\Tarjeta.cs",
               "RelativeDocumentMoniker": "Tarjeta.cs",
-              "ToolTip": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\TP_Colectivo\\Tarjeta.cs",
+              "ToolTip": "D:\\Francisco\\C#\\Trabajo-pr-ctico-Tarjeta\\TP_Colectivo\\Tarjeta.cs",
               "RelativeToolTip": "Tarjeta.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwB0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-23T22:17:45.16Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
+              "Title": "TP_Colectivo_test.csproj",
+              "DocumentMoniker": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\TP_Colectivo_test\\TP_Colectivo_test.csproj",
+              "ToolTip": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\TP_Colectivo_test\\TP_Colectivo_test.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-23T22:19:28.396Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "MedioBoleto.cs",
-              "DocumentMoniker": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\TP_Colectivo\\MedioBoleto.cs",
+              "DocumentMoniker": "D:\\Francisco\\C#\\Trabajo-pr-ctico-Tarjeta\\TP_Colectivo\\MedioBoleto.cs",
               "RelativeDocumentMoniker": "MedioBoleto.cs",
-              "ToolTip": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\TP_Colectivo\\MedioBoleto.cs",
+              "ToolTip": "D:\\Francisco\\C#\\Trabajo-pr-ctico-Tarjeta\\TP_Colectivo\\MedioBoleto.cs",
               "RelativeToolTip": "MedioBoleto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -87,85 +123,40 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "Colectivo.cs",
-              "DocumentMoniker": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\TP_Colectivo\\Colectivo.cs",
+              "DocumentMoniker": "D:\\Francisco\\C#\\Trabajo-pr-ctico-Tarjeta\\TP_Colectivo\\Colectivo.cs",
               "RelativeDocumentMoniker": "Colectivo.cs",
-              "ToolTip": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\TP_Colectivo\\Colectivo.cs",
+              "ToolTip": "D:\\Francisco\\C#\\Trabajo-pr-ctico-Tarjeta\\TP_Colectivo\\Colectivo.cs",
               "RelativeToolTip": "Colectivo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-23T22:17:34.547Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "BoletoGratuito.cs",
-              "DocumentMoniker": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\TP_Colectivo\\BoletoGratuito.cs",
-              "RelativeDocumentMoniker": "BoletoGratuito.cs",
-              "ToolTip": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\TP_Colectivo\\BoletoGratuito.cs",
-              "RelativeToolTip": "BoletoGratuito.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T22:17:27.717Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Boleto.cs",
-              "DocumentMoniker": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\TP_Colectivo\\Boleto.cs",
-              "RelativeDocumentMoniker": "Boleto.cs",
-              "ToolTip": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\TP_Colectivo\\Boleto.cs",
-              "RelativeToolTip": "Boleto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T22:16:37.55Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TP_Colectivo",
-              "DocumentMoniker": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\TP_Colectivo\\TP_Colectivo.csproj",
+              "DocumentIndex": 7,
+              "Title": "TP_Colectivo.csproj",
+              "DocumentMoniker": "D:\\Francisco\\C#\\Trabajo-pr-ctico-Tarjeta\\TP_Colectivo\\TP_Colectivo.csproj",
               "RelativeDocumentMoniker": "TP_Colectivo.csproj",
-              "ToolTip": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\TP_Colectivo\\TP_Colectivo.csproj",
+              "ToolTip": "D:\\Francisco\\C#\\Trabajo-pr-ctico-Tarjeta\\TP_Colectivo\\TP_Colectivo.csproj",
               "RelativeToolTip": "TP_Colectivo.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwQAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-23T22:11:30.486Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "WhenOpened": "2024-10-23T22:11:30.486Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UnitTest1.cs",
-              "DocumentMoniker": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\TP_Colectivo_test\\UnitTest1.cs",
-              "RelativeDocumentMoniker": "..\\TP_Colectivo_test\\UnitTest1.cs",
-              "ToolTip": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\TP_Colectivo_test\\UnitTest1.cs",
-              "RelativeToolTip": "..\\TP_Colectivo_test\\UnitTest1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T22:11:21.165Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\TP_Colectivo\\Program.cs",
+              "DocumentMoniker": "D:\\Francisco\\C#\\Trabajo-pr-ctico-Tarjeta\\TP_Colectivo\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\TP_Colectivo\\Program.cs",
+              "ToolTip": "D:\\Francisco\\C#\\Trabajo-pr-ctico-Tarjeta\\TP_Colectivo\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T22:10:12.287Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T22:10:12.287Z"
             }
           ]
         }
