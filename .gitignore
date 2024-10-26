@@ -1,0 +1,27 @@
+# Ignora la carpeta de configuración de Visual Studio
+.vs/
+
+# Ignora los archivos temporales y de build
+*.obj
+*.exe
+*.dll
+*.pdb
+*.cache
+*.dbmdl
+*.log
+*.suo
+
+# Ignora archivos de configuración de usuario
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignora las carpetas de debug y release
+[Bb]in/
+[Oo]bj/
+
+# Ignora paquetes de NuGet
+*.nupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
