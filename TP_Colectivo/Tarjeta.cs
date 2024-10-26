@@ -21,6 +21,16 @@ namespace TP_Colectivo
             this.id = id;
         }
 
+        public float saldin()
+        {
+            return saldo;
+        }
+
+        public void setear(float saldo2)
+        {
+            saldo = saldo2;
+        }
+
         public void CargarTarjeta(float monto)
         {
             if (Array.Exists(montos_disponibles, x => x == monto))

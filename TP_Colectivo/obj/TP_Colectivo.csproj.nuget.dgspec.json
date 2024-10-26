@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\TP_Colectivo\\TP_Colectivo.csproj": {}
+    "D:\\Francisco\\C#\\Trabajo-pr-ctico-Tarjeta\\TP_Colectivo\\TP_Colectivo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\TP_Colectivo\\TP_Colectivo.csproj": {
+    "D:\\Francisco\\C#\\Trabajo-pr-ctico-Tarjeta\\TP_Colectivo\\TP_Colectivo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\TP_Colectivo\\TP_Colectivo.csproj",
+        "projectUniqueName": "D:\\Francisco\\C#\\Trabajo-pr-ctico-Tarjeta\\TP_Colectivo\\TP_Colectivo.csproj",
         "projectName": "TP_Colectivo",
-        "projectPath": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\TP_Colectivo\\TP_Colectivo.csproj",
-        "packagesPath": "C:\\Users\\marcos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marcos\\OneDrive - TELEQUAL\\Escuela\\2024\\TrabajoC\\TP_Colectivo\\obj\\",
+        "projectPath": "D:\\Francisco\\C#\\Trabajo-pr-ctico-Tarjeta\\TP_Colectivo\\TP_Colectivo.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "D:\\Francisco\\C#\\Trabajo-pr-ctico-Tarjeta\\TP_Colectivo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\marcos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

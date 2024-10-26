@@ -8,7 +8,7 @@ namespace TP_Colectivo
 {
   public class Colectivo{
     public string Linea;
-    private float precio;
+    public float precio;
     private Boleto boleto;
 
     public Colectivo(string linea){
