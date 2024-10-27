@@ -398,3 +398,8 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/.vs
+/TP_Colectivo/.vs
+/TP_Colectivo/obj
+/TP_Colectivo_test/obj
+/TP_Colectivo_test/bin

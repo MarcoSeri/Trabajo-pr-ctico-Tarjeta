@@ -8,6 +8,7 @@ namespace TP_Colectivo_test
     {
         public Colectivo q;
         public Tarjeta tarjeta;
+
         [SetUp]
         public void Setup()
         {
