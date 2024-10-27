@@ -8,22 +8,19 @@ namespace TP_Colectivo
 {
     public class Tarjeta
     {
-        private float saldo;
-        public int id;
         public float saldo_negativo = -480;
-        private float limite = 9900;
-        private float[] montos_disponibles = { 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000 };
         public List<Boleto> historial = new List<Boleto>();
+        private float[] montos_disponibles = { 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000 };
+        private float limite = 36000;
+
+        public int id;
         public int ViajesHoy;
+        public float acreditacionPendiente;
+        private float saldo;
 
         public Tarjeta(int id)
         {
             this.id = id;
-        }
-
-        public float saldin()
-        {
-            return saldo;
         }
 
         public void setear(float saldo2)
@@ -37,35 +34,28 @@ namespace TP_Colectivo
             {
                 if ((saldo + monto) < limite)
                 {
-                    if (saldo < 0)
-                    {
-                        saldo += monto;
-                        Console.WriteLine("Saldo adeudado descontado. Saldo Actual: " + saldo);
-                    }
-                    else 
-                    {
                     saldo += monto;
-                    Console.WriteLine("Saldo Actual: " + saldo);
-                    }
                 }
+
                 else
-                    Console.WriteLine("El monto excede el limite de la tarjeta");
+                {
+                    acreditacionPendiente = (saldo + monto) - limite;
+                    saldo = limite;
+                }
             }
         }
+        public float RestarSaldo(float monto){
+            return saldo -= monto;
+        }
 
-
-
-        public void MostrarSaldo()
+        public float RestarPendiente(float monto)
         {
-            Console.Write("Saldo : " + saldo);
+            return saldo -= monto;
         }
 
         public float VerSaldo()
         {
             return saldo;
-        }
-        public float RestarSaldo(float monto){
-            return saldo -= monto;
         }
     }
 }
