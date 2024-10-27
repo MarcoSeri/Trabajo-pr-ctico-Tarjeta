@@ -8,7 +8,7 @@ namespace TP_Colectivo
 {
   public class Colectivo{
     public string Linea;
-    public float precio;
+    public float precio = 940;
     private Boleto boleto;
 
     public Colectivo(string linea){
@@ -19,21 +19,26 @@ namespace TP_Colectivo
       precio = 940;
       string tipo = "Boleto Normal";
       float saldoDisponible = tarjeta.VerSaldo();
+
       bool tieneSaldoMedioBoleto = saldoDisponible >= (tarjeta.saldo_negativo + (precio * 0.5f));
       bool tieneSaldoBoletoNormal = saldoDisponible >= (tarjeta.saldo_negativo + precio);
       
       if(tarjeta is MedioBoleto && tieneSaldoMedioBoleto){
+
         var ultimoViaje = tarjeta.historial.LastOrDefault();
+
         if (ultimoViaje != null && pasaronCincoMinutos(ultimoViaje.fecha) && tarjeta.ViajesHoy < 4){
           Console.WriteLine("5 minutos");
           precio *= 0.5f;
           tarjeta.ViajesHoy++;
         }
+
         else if(ultimoViaje == null){
           Console.WriteLine("ultimo null");
           precio *= 0.5f;
           tarjeta.ViajesHoy++;
         } 
+
       }
       
       else if(tarjeta is BoletoGratuito && tarjeta.ViajesHoy<=2){
@@ -51,10 +56,25 @@ namespace TP_Colectivo
           return null; 
       }
 
-      tarjeta.RestarSaldo(precio);
+      if(tarjeta.acreditacionPendiente != 0)
+        {
+            tarjeta.acreditacionPendiente -= precio;
+
+            if(tarjeta.acreditacionPendiente < 0)
+            {
+                tarjeta.RestarSaldo(-tarjeta.acreditacionPendiente);
+                tarjeta.acreditacionPendiente = 0;
+            }
+        }
+      else
+        {
+                tarjeta.RestarSaldo(precio);
+        }
+
       boleto = new Boleto(tarjeta.id,tipo,precio,Linea, tarjeta.VerSaldo());
       tarjeta.historial.Add(boleto);
       return boleto; 
+
     }
 
     private bool pasaronCincoMinutos(DateTime ultimoViaje){
