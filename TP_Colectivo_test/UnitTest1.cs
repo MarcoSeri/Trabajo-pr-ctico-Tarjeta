@@ -8,6 +8,7 @@ namespace TP_Colectivo_test
     {
         public Colectivo q;
         public Tarjeta tarjeta;
+        public Tiempo tiempo;
 
         [SetUp]
         public void Setup()
@@ -63,18 +64,18 @@ namespace TP_Colectivo_test
         public void chequeo_saldonegativo()
         {
             tarjeta.CargarTarjeta(5000);
-            q.pagarCon(tarjeta);
+            q.pagarCon(tarjeta,tiempo);
             Assert.That(tarjeta.VerSaldo, Is.EqualTo(4060));
 
             tarjeta.setear(460);
-            q.pagarCon(tarjeta);
+            q.pagarCon(tarjeta, tiempo);
             Assert.That(tarjeta.VerSaldo, Is.EqualTo(tarjeta.VerSaldo() - q.precio));
 
             tarjeta.CargarTarjeta(7000);
             Assert.That(tarjeta.VerSaldo, Is.EqualTo(tarjeta.VerSaldo() + 7000));
 
             tarjeta.setear(0);
-            q.pagarCon(tarjeta);
+            q.pagarCon(tarjeta, tiempo);
             Assert.That(tarjeta.VerSaldo, Is.EqualTo(0));
         }
     }

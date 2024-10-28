@@ -14,7 +14,8 @@ namespace TP_Colectivo{
     public DateTime fecha;
 
 
-    public Boleto(int id,string tipo, float precio, string linea, float saldo){
+    public Boleto(int id,string tipo, float precio, string linea, float saldo, DateTime tiempo){
+      fecha = tiempo;
       tipoDeBoleto = tipo;
       this.id = id;
       this.precio = precio;
