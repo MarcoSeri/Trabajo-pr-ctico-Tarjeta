@@ -9,8 +9,8 @@ namespace TP_Colectivo
   public class Colectivo{
     public string Linea;
     public float tarifa = 940;
-    public float precio;
-    private Boleto boleto;
+    public float precio; //Esto tiene que estar en el archivo de cada coso
+    private Boleto boleto; //No hacer esto, returnearlo directamente
 
     public Colectivo(string linea){
       this.Linea = linea;
