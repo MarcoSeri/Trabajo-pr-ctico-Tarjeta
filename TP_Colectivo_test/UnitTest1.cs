@@ -13,6 +13,7 @@ namespace TP_Colectivo_test
         [SetUp]
         public void Setup()
         {
+            tiempo = new TiempoFalso();
             tarjeta = new Tarjeta(1);
             q = new Colectivo("Q");
         }
@@ -69,10 +70,9 @@ namespace TP_Colectivo_test
 
             tarjeta.setear(460);
             q.pagarCon(tarjeta, tiempo);
-            Assert.That(tarjeta.VerSaldo, Is.EqualTo(tarjeta.VerSaldo() - q.precio));
-
+            Assert.That(tarjeta.VerSaldo, Is.EqualTo(-480));
             tarjeta.CargarTarjeta(7000);
-            Assert.That(tarjeta.VerSaldo, Is.EqualTo(tarjeta.VerSaldo() + 7000));
+            Assert.That(tarjeta.VerSaldo, Is.EqualTo(6520));
 
             tarjeta.setear(0);
             q.pagarCon(tarjeta, tiempo);
