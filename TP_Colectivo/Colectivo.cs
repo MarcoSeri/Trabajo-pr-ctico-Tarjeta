@@ -17,14 +17,15 @@ namespace TP_Colectivo
     }
 
     public Boleto pagarCon(Tarjeta tarjeta, Tiempo tiempo){
-      precio = 940;
+      precio = tarifa;
       string tipo = "Boleto Normal";
       float saldoDisponible = tarjeta.VerSaldo();
 
       bool tieneSaldoMedioBoleto = saldoDisponible >= (tarjeta.saldo_negativo + (precio * 0.5f));
       bool tieneSaldoBoletoNormal = saldoDisponible >= (tarjeta.saldo_negativo + precio);
       
-      if(tarjeta is MedioBoleto && tieneSaldoMedioBoleto){
+      if(tarjeta is MedioBoleto && tieneSaldoMedioBoleto && estaEnHora(tiempo))
+       {
 
         var ultimoViaje = tarjeta.historial.LastOrDefault();
 
@@ -42,7 +43,7 @@ namespace TP_Colectivo
 
       }
       
-      else if(tarjeta is BoletoGratuito && tarjeta.ViajesHoy<2){
+      else if(tarjeta is BoletoGratuito && tarjeta.ViajesHoy<2 && estaEnHora(tiempo)){
         precio = 0;
         tipo = "Boleto gratuito";
         tarjeta.ViajesHoy++;  
@@ -93,6 +94,23 @@ namespace TP_Colectivo
         {
             TimeSpan diferencia = fechaFin - fechaInicio;
             return (int)diferencia.TotalMinutes;
+        }
+
+        private bool estaEnHora(Tiempo tiempo)
+        {
+            DateTime ahora = tiempo.Now();
+            DayOfWeek diaActual = ahora.DayOfWeek;
+
+            if (diaActual >= DayOfWeek.Monday && diaActual <= DayOfWeek.Friday)
+            {
+                TimeSpan horaActual = ahora.TimeOfDay;
+                TimeSpan inicio = new TimeSpan(6, 0, 0);
+                TimeSpan fin = new TimeSpan(22, 0, 0);
+
+                return horaActual >= inicio && horaActual <= fin;
+            }
+
+            return false;
         }
 
 
