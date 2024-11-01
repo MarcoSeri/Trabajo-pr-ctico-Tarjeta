@@ -8,7 +8,7 @@ namespace TP_Colectivo
 {
   public class Colectivo{
     public string Linea;
-    public float tarifa = 940;
+    public float tarifa;
     public float precio; //Esto tiene que estar en el archivo de cada coso
     private Boleto boleto; //No hacer esto, returnearlo directamente
 
@@ -17,46 +17,87 @@ namespace TP_Colectivo
     }
 
     public Boleto pagarCon(Tarjeta tarjeta, Tiempo tiempo){
-      precio = 940;
+            tarifa = 940;
+            precio = 940;
+      
       string tipo = "Boleto Normal";
       float saldoDisponible = tarjeta.VerSaldo();
 
       bool tieneSaldoMedioBoleto = saldoDisponible >= (tarjeta.saldo_negativo + (precio * 0.5f));
       bool tieneSaldoBoletoNormal = saldoDisponible >= (tarjeta.saldo_negativo + precio);
-      
-      if(tarjeta is MedioBoleto && tieneSaldoMedioBoleto){
+      bool tieneSaldo20 = saldoDisponible >= (tarjeta.saldo_negativo + precio * 0.80f);
+      bool tieneSaldo25 = saldoDisponible >= (tarjeta.saldo_negativo + precio * 0.75f);
 
-        var ultimoViaje = tarjeta.historial.LastOrDefault();
+       if (tarjeta is MedioBoleto && tieneSaldoMedioBoleto){
 
-        if (ultimoViaje != null && pasaronCincoMinutos(ultimoViaje.fecha,tiempo) && tarjeta.ViajesHoy < 4){
-          Console.WriteLine("5 minutos");
-          precio *= 0.5f;
-          tarjeta.ViajesHoy++;
-        }
+          var ultimoViaje = tarjeta.historial.LastOrDefault();
 
-        else if(ultimoViaje == null){
-          Console.WriteLine("ultimo null");
-          precio *= 0.5f;
-          tarjeta.ViajesHoy++;
-        } 
+                 if (ultimoViaje != null && pasaronCincoMinutos(ultimoViaje.fecha,tiempo) && tarjeta.ViajesHoy < 4){
+                  Console.WriteLine("5 minutos");
+                  precio *= 0.5f;
+                  tarjeta.ViajesHoy++;
+                 }
 
-      }
-      
-      else if(tarjeta is BoletoGratuito && tarjeta.ViajesHoy<2){
-        precio = 0;
-        tipo = "Boleto gratuito";
-        tarjeta.ViajesHoy++;  
-      }
+                 else if(ultimoViaje == null){
+                 Console.WriteLine("ultimo null");
+                 precio *= 0.5f;
+                 tarjeta.ViajesHoy++;
+                 } 
 
-      else if(tieneSaldoBoletoNormal){
-        precio = tarifa;
-        tipo = "Boleto normal";
-      }
+       }
+       else if (tarjeta is BoletoGratuito && tarjeta.ViajesHoy < 2)
+            {
+                precio = 0;
+                tipo = "Boleto gratuito";
+                tarjeta.ViajesHoy++;
+            }
 
-      else{
-          Console.WriteLine("No tiene saldo suficiente");
-          return null; 
-      }
+        else if (tarjeta.historial.Count != 0)
+            {
+                if(tarjeta.historial.LastOrDefault().fecha.Month != tiempo.Now().Month || tarjeta.historial.LastOrDefault().fecha.Year != tiempo.Now().Year)
+                {
+                    tarjeta.ViajesMes = 0;
+                }
+                if (tarjeta.ViajesMes >= 0 && tarjeta.ViajesMes < 30 && tieneSaldoBoletoNormal)
+                {
+                    precio = tarifa;
+                    tipo = "Boleto Normal";
+                    tarjeta.ViajesMes++;
+                }
+                
+                else if (tarjeta.ViajesMes > 29 && tarjeta.ViajesMes < 80 && tieneSaldo20)
+                {
+                    precio *= 0.80f;
+                    tipo = "Boleto Normal";
+                    tarjeta.ViajesMes++;
+                }
+            
+                else if (tarjeta.ViajesMes >= 80 && tieneSaldo25)
+                {
+                    precio *= 0.75f;
+                    tipo = "Boleto Normal";
+                    tarjeta.ViajesMes++;
+                }
+                  
+                else
+                {
+                    Console.WriteLine("No tiene saldo suficiente");
+                    return null;
+                }
+            }
+        
+        else if (tarjeta.historial.Count == 0 && tieneSaldoBoletoNormal)
+            {
+                precio = tarifa;
+                tipo = "Boleto Normal";
+                tarjeta.ViajesMes ++;
+            }
+           
+        else
+            {
+                Console.WriteLine("No tiene saldo suficiente");
+                return null; 
+            }
 
       if(tarjeta.acreditacionPendiente != 0)
         {

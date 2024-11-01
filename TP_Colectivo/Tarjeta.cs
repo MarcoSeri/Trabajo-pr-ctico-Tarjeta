@@ -14,6 +14,7 @@ namespace TP_Colectivo
         private float limite = 36000;
 
         public int id;
+        public int ViajesMes;
         public int ViajesHoy;
         public float acreditacionPendiente;
         private float saldo;
