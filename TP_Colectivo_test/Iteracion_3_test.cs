@@ -20,6 +20,7 @@ namespace TP_Colectivo_test
             medioBoleto = new MedioBoleto(2006);
             gratuitoBoleto = new BoletoGratuito(2077);
             q = new Colectivo("Q");
+            tiempo.AgregarMinutos(600);
         }
 
         [Test]
