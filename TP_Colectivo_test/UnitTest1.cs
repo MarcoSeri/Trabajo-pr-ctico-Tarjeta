@@ -6,9 +6,10 @@ namespace TP_Colectivo_test
     public class Tests
 
     {
-        public Colectivo q;
-        public Tarjeta tarjeta;
-        public Tiempo tiempo;
+        private Colectivo q;
+        private Tarjeta tarjeta;
+        private Tiempo tiempo;
+        private float tarifa;
 
         [SetUp]
         public void Setup()
@@ -16,6 +17,7 @@ namespace TP_Colectivo_test
             tiempo = new TiempoFalso();
             tarjeta = new Tarjeta(1);
             q = new Colectivo("Q");
+            tarifa = q.VerTarifa();
         }
 
         [Test]
@@ -66,7 +68,7 @@ namespace TP_Colectivo_test
         {
             tarjeta.CargarTarjeta(5000);
             q.pagarCon(tarjeta,tiempo);
-            Assert.That(tarjeta.VerSaldo, Is.EqualTo(4060));
+            Assert.That(tarjeta.VerSaldo, Is.EqualTo(5000 - tarifa));
 
             tarjeta.setear(460);
             q.pagarCon(tarjeta, tiempo);

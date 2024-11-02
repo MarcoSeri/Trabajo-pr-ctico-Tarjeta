@@ -8,10 +8,15 @@ namespace TP_Colectivo_test
     {
         private TiempoFalso tiempo;
         private DateTime tiempoahora;
+
         private Colectivo q;
+
         private Tarjeta tarjeta;
         private Tarjeta medioBoleto;
         private Tarjeta gratuitoBoleto;
+
+        private float tarifa;
+        private float medio;
 
         [SetUp]
         public void Setup()
@@ -21,6 +26,8 @@ namespace TP_Colectivo_test
             medioBoleto = new MedioBoleto(2006);
             gratuitoBoleto = new BoletoGratuito(2077);
             q = new Colectivo("Q");
+            tarifa = q.VerTarifa();
+            medio = tarifa * 0.5f;
         }
 
         [Test]
@@ -32,7 +39,7 @@ namespace TP_Colectivo_test
             medioBoleto.setear(2000);
             q.pagarCon(medioBoleto,tiempo);
 
-            Assert.That(medioBoleto.VerSaldo, Is.EqualTo(1060));
+            Assert.That(medioBoleto.VerSaldo, Is.EqualTo(2000 - tarifa));
 
             //Es un lunes pero son las antes de las 6
             tiempo.AgregarDias(2);
@@ -41,7 +48,7 @@ namespace TP_Colectivo_test
             medioBoleto.setear(2000);
             q.pagarCon(medioBoleto, tiempo);
 
-            Assert.That(medioBoleto.VerSaldo, Is.EqualTo(1060));
+            Assert.That(medioBoleto.VerSaldo, Is.EqualTo(2000 - tarifa));
 
             //Es un lunes pero son las despues de las 10
             tiempo.AgregarMinutos(1080);
@@ -49,7 +56,7 @@ namespace TP_Colectivo_test
             medioBoleto.setear(2000);
             q.pagarCon(medioBoleto, tiempo);
 
-            Assert.That(medioBoleto.VerSaldo, Is.EqualTo(1060));
+            Assert.That(medioBoleto.VerSaldo, Is.EqualTo(2000 - tarifa));
 
             Assert.Pass();
         }
