@@ -38,11 +38,9 @@ namespace TP_Colectivo_test
             tiempo.AgregarDias(6);
 
             medioBoleto.setear(2000);
-
-            q.pagarCon(medioBoleto,tiempo);
+            q.pagarCon(medioBoleto, tiempo);
 
             Assert.That(medioBoleto.VerSaldo, Is.EqualTo(2000 - tarifa));
-
 
             //Es un lunes pero son las antes de las 6
             tiempo.AgregarDias(2);
@@ -53,12 +51,16 @@ namespace TP_Colectivo_test
 
             Assert.That(medioBoleto.VerSaldo, Is.EqualTo(2000 - tarifa));
 
-
             //Es un lunes pero son las despues de las 10
             tiempo.AgregarMinutos(1080);
 
             medioBoleto.setear(2000);
             q.pagarCon(medioBoleto, tiempo);
+
+            Assert.That(medioBoleto.VerSaldo, Is.EqualTo(2000 - tarifa));
+
+            Assert.Pass();
+        }
 
         [Test]
 

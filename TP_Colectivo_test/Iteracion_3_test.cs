@@ -52,16 +52,18 @@ namespace TP_Colectivo_test
         public void SaldoDeLaTarjeta()
         {
             tarjeta.setear(35000);
-            tarjeta.CargarTarjeta(2000);
+            tarjeta.CargarTarjeta(4000);
 
 
             Assert.That(tarjeta.VerSaldo, Is.EqualTo(36000));
-            Assert.That(tarjeta.acreditacionPendiente, Is.EqualTo(37000 - 36000));
+            Assert.That(tarjeta.acreditacionPendiente, Is.EqualTo(39000 - 36000));
 
             q.pagarCon(tarjeta, tiempo);
-            Assert.That(tarjeta.acreditacionPendiente, Is.EqualTo(1000 - tarifa));
+            Assert.That(tarjeta.acreditacionPendiente, Is.EqualTo(3000 - tarifa));
 
             q.pagarCon(tarjeta, tiempo);
+            q.pagarCon(tarjeta, tiempo);
+
             Assert.That(tarjeta.acreditacionPendiente, Is.EqualTo(0));
 
             tarjeta.CargarTarjeta(2000);

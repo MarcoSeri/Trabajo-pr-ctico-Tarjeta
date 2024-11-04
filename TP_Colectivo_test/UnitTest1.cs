@@ -70,7 +70,7 @@ namespace TP_Colectivo_test
             q.pagarCon(tarjeta,tiempo);
             Assert.That(tarjeta.VerSaldo, Is.EqualTo(5000 - tarifa));
 
-            tarjeta.setear(460);
+            tarjeta.setear(-480 + q.VerTarifa());
             q.pagarCon(tarjeta, tiempo);
             Assert.That(tarjeta.VerSaldo, Is.EqualTo(-480));
             tarjeta.CargarTarjeta(7000);

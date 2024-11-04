@@ -8,7 +8,7 @@ namespace TP_Colectivo
 {
   public class Colectivo{
     public string Linea;
-    public float tarifa;
+    public float tarifa = 1200;
     public float precio; //Esto tiene que estar en el archivo de cada coso
 
     public Colectivo(string linea){
@@ -26,27 +26,27 @@ namespace TP_Colectivo
       bool tieneSaldo20 = saldoDisponible >= (tarjeta.saldo_negativo + precio * 0.80f);
       bool tieneSaldo25 = saldoDisponible >= (tarjeta.saldo_negativo + precio * 0.75f);
 
-				if(tarjeta is MedioBoleto && tieneSaldoMedioBoleto && estaEnHora(tiempo))
-							 {
+        if(tarjeta is MedioBoleto && tieneSaldoMedioBoleto && estaEnHora(tiempo))
+	        {
 
-								var ultimoViaje = tarjeta.historial.LastOrDefault();
+	        var ultimoViaje = tarjeta.historial.LastOrDefault();
 
-								if (ultimoViaje != null && pasaronCincoMinutos(ultimoViaje.fecha,tiempo) && tarjeta.ViajesHoy < 4){
-									precio *= 0.5f;
-									tarjeta.ViajesHoy++;
-								}
+	        if (ultimoViaje != null && pasaronCincoMinutos(ultimoViaje.fecha,tiempo) && tarjeta.ViajesHoy < 4){
+		        precio *= 0.5f;
+		        tarjeta.ViajesHoy++;
+	        }
 
-								else if(ultimoViaje == null){
-									precio *= 0.5f;
-									tarjeta.ViajesHoy++;
-								} 
+	        else if(ultimoViaje == null){
+		        precio *= 0.5f;
+		        tarjeta.ViajesHoy++;
+	        } 
 
-							}
+            }
 
-							else if(tarjeta is BoletoGratuito && tarjeta.ViajesHoy<2 && estaEnHora(tiempo)){
-								precio = 0;
-								tarjeta.ViajesHoy++;  
-							}
+        else if(tarjeta is BoletoGratuito && tarjeta.ViajesHoy<2 && estaEnHora(tiempo)){
+	        precio = 0;
+	        tarjeta.ViajesHoy++;  
+        }
 
         else if (tarjeta.historial.Count != 0)
             {
