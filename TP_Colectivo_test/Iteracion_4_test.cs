@@ -74,7 +74,8 @@ namespace TP_Colectivo_test
             tarjeta.CargarTarjeta(3000);
             q.pagarCon(tarjeta, tiempo);
             tarjeta.setviajesmes(30);
-            Assert.That(tarjeta.VerSaldo, Is.EqualTo(3000 - (q.precio * 0.80)));
+            q.pagarCon(tarjeta, tiempo);
+            Assert.That(tarjeta.VerSaldo, Is.EqualTo(3000 - (q.tarifa * 0.8f) - q.tarifa));
             Assert.That(tarjeta.ViajesMes, Is.EqualTo(31));
         }
 
@@ -89,10 +90,11 @@ namespace TP_Colectivo_test
         [Test]
         public void usofrecuente80()
         {
-            tarjeta.setviajesmes(88);
             tarjeta.CargarTarjeta(3000);
             q.pagarCon(tarjeta, tiempo);
-            Assert.That(tarjeta.VerSaldo, Is.EqualTo(3000 - q.precio * 0.75));
+            tarjeta.setviajesmes(88);
+            q.pagarCon(tarjeta, tiempo);
+            Assert.That(tarjeta.VerSaldo, Is.EqualTo(3000 - (q.tarifa * 0.75f) - q.tarifa));
             Assert.That(tarjeta.ViajesMes, Is.EqualTo(89));
         }
     
