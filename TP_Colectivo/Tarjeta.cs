@@ -54,9 +54,18 @@ namespace TP_Colectivo
             return saldo -= monto;
         }
 
+        public int viajemes()
+        {
+            return ViajesMes;
+        }
+
         public float VerSaldo()
         {
             return saldo;
+        }
+        public void setviajesmes(int num)
+        {
+            ViajesMes = num;
         }
     }
 }

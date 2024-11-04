@@ -28,7 +28,8 @@ namespace TP_Colectivo
       bool tieneSaldo20 = saldoDisponible >= (tarjeta.saldo_negativo + precio * 0.80f);
       bool tieneSaldo25 = saldoDisponible >= (tarjeta.saldo_negativo + precio * 0.75f);
 
-       if (tarjeta is MedioBoleto && tieneSaldoMedioBoleto){
+       if (tarjeta is MedioBoleto && tieneSaldoMedioBoleto)
+       {
 
           var ultimoViaje = tarjeta.historial.LastOrDefault();
 
@@ -46,11 +47,11 @@ namespace TP_Colectivo
 
        }
        else if (tarjeta is BoletoGratuito && tarjeta.ViajesHoy < 2)
-            {
+       {
                 precio = 0;
                 tipo = "Boleto gratuito";
                 tarjeta.ViajesHoy++;
-            }
+       }
 
         else if (tarjeta.historial.Count != 0)
             {
