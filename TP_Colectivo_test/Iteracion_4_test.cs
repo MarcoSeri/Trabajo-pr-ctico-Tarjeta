@@ -9,6 +9,7 @@ namespace TP_Colectivo_test
         private TiempoFalso tiempo;
         private DateTime tiempoahora;
         private Colectivo q;
+        private ColectivoInterurbano Swift;
 
         private Tarjeta tarjeta;
         private Tarjeta medioBoleto;
@@ -24,8 +25,9 @@ namespace TP_Colectivo_test
             tarjeta = new Tarjeta(1974);
             medioBoleto = new MedioBoleto(2006);
             gratuitoBoleto = new BoletoGratuito(2077);
+            Swift = new ColectivoInterurbano("Expresso Swift");
             q = new Colectivo("Q");
-					
+           
             tarifa = q.VerTarifa();
             medio = tarifa * 0.5f;
 
@@ -104,5 +106,22 @@ namespace TP_Colectivo_test
             Assert.That(tarjeta.VerSaldo, Is.EqualTo(3000 - (q.tarifa * 0.75f) - q.tarifa));
             Assert.That(tarjeta.ViajesMes, Is.EqualTo(89));
         }
+
+        [Test]
+        public void interurbano()
+        {
+            tarjeta.CargarTarjeta(3000);
+            Swift.pagarCon(tarjeta, tiempo);
+            Assert.That(tarjeta.VerSaldo, Is.EqualTo(3000 - Swift.tarifa));
+        }
+
+        [Test]
+        public void negineterurbano()
+        {
+            tarjeta.CargarTarjeta(2100);
+            Swift.pagarCon(tarjeta, tiempo);
+            Assert.That(tarjeta.VerSaldo, Is.EqualTo(2100 - Swift.tarifa));
+        }
+
     }
 }

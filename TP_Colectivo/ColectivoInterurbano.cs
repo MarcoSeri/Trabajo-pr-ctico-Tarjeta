@@ -10,7 +10,7 @@ namespace TP_Colectivo
     {
         public ColectivoInterurbano(string linea) : base(linea)
         {
-            precio = 2500;
+            tarifa = 2500;
         }
     }
 }
