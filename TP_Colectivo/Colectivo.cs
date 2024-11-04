@@ -8,7 +8,7 @@ namespace TP_Colectivo
 {
   public class Colectivo{
     public string Linea;
-    public float tarifa = 940;
+    public float tarifa;
     public float precio; //Esto tiene que estar en el archivo de cada coso
 
     public Colectivo(string linea){
@@ -17,41 +17,79 @@ namespace TP_Colectivo
 
     public Boleto pagarCon(Tarjeta tarjeta, Tiempo tiempo){
       precio = tarifa;
+      
       float saldoDisponible = tarjeta.VerSaldo();
 
       bool tieneSaldoMedioBoleto = saldoDisponible >= (tarjeta.saldo_negativo + (precio * 0.5f));
       bool tieneSaldoBoletoNormal = saldoDisponible >= (tarjeta.saldo_negativo + precio);
-      
-      if(tarjeta is MedioBoleto && tieneSaldoMedioBoleto && estaEnHora(tiempo))
-       {
 
-        var ultimoViaje = tarjeta.historial.LastOrDefault();
+      bool tieneSaldo20 = saldoDisponible >= (tarjeta.saldo_negativo + precio * 0.80f);
+      bool tieneSaldo25 = saldoDisponible >= (tarjeta.saldo_negativo + precio * 0.75f);
 
-        if (ultimoViaje != null && pasaronCincoMinutos(ultimoViaje.fecha,tiempo) && tarjeta.ViajesHoy < 4){
-          precio *= 0.5f;
-          tarjeta.ViajesHoy++;
-        }
+				if(tarjeta is MedioBoleto && tieneSaldoMedioBoleto && estaEnHora(tiempo))
+							 {
 
-        else if(ultimoViaje == null){
-          precio *= 0.5f;
-          tarjeta.ViajesHoy++;
-        } 
+								var ultimoViaje = tarjeta.historial.LastOrDefault();
 
-      }
-      
-      else if(tarjeta is BoletoGratuito && tarjeta.ViajesHoy<2 && estaEnHora(tiempo)){
-        precio = 0;
-        tarjeta.ViajesHoy++;  
-      }
+								if (ultimoViaje != null && pasaronCincoMinutos(ultimoViaje.fecha,tiempo) && tarjeta.ViajesHoy < 4){
+									precio *= 0.5f;
+									tarjeta.ViajesHoy++;
+								}
 
-      else if(tieneSaldoBoletoNormal){
-        precio = tarifa;
-      }
+								else if(ultimoViaje == null){
+									precio *= 0.5f;
+									tarjeta.ViajesHoy++;
+								} 
 
-      else{
-          Console.WriteLine("No tiene saldo suficiente");
-          return null; 
-      }
+							}
+
+							else if(tarjeta is BoletoGratuito && tarjeta.ViajesHoy<2 && estaEnHora(tiempo)){
+								precio = 0;
+								tarjeta.ViajesHoy++;  
+							}
+
+        else if (tarjeta.historial.Count != 0)
+            {
+                if(tarjeta.historial.LastOrDefault().fecha.Month != tiempo.Now().Month || tarjeta.historial.LastOrDefault().fecha.Year != tiempo.Now().Year)
+                {
+                    tarjeta.ViajesMes = 0;
+                }
+                if (tarjeta.ViajesMes >= 0 && tarjeta.ViajesMes < 30 && tieneSaldoBoletoNormal)
+                {
+                    precio = tarifa;
+                    tarjeta.ViajesMes++;
+                }
+                
+                else if (tarjeta.ViajesMes > 29 && tarjeta.ViajesMes < 80 && tieneSaldo20)
+                {
+                    precio *= 0.80f;
+                    tarjeta.ViajesMes++;
+                }
+            
+                else if (tarjeta.ViajesMes >= 80 && tieneSaldo25)
+                {
+                    precio *= 0.75f;
+                    tarjeta.ViajesMes++;
+                }
+                  
+                else
+                {
+                    Console.WriteLine("No tiene saldo suficiente");
+                    return null;
+                }
+            }
+        
+        else if (tarjeta.historial.Count == 0 && tieneSaldoBoletoNormal)
+            {
+                precio = tarifa;
+                tarjeta.ViajesMes ++;
+            }
+           
+        else
+            {
+                Console.WriteLine("No tiene saldo suficiente");
+                return null; 
+            }
 
       if(tarjeta.acreditacionPendiente != 0)
         {
