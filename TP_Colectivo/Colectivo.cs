@@ -10,48 +10,43 @@ namespace TP_Colectivo
     public string Linea;
     public float tarifa;
     public float precio; //Esto tiene que estar en el archivo de cada coso
-    private Boleto boleto; //No hacer esto, returnearlo directamente
 
     public Colectivo(string linea){
       this.Linea = linea;
     }
 
     public Boleto pagarCon(Tarjeta tarjeta, Tiempo tiempo){
-            tarifa = 940;
-            precio = 940;
+      precio = tarifa;
       
-      string tipo = "Boleto Normal";
       float saldoDisponible = tarjeta.VerSaldo();
 
       bool tieneSaldoMedioBoleto = saldoDisponible >= (tarjeta.saldo_negativo + (precio * 0.5f));
       bool tieneSaldoBoletoNormal = saldoDisponible >= (tarjeta.saldo_negativo + precio);
+
       bool tieneSaldo20 = saldoDisponible >= (tarjeta.saldo_negativo + precio * 0.80f);
       bool tieneSaldo25 = saldoDisponible >= (tarjeta.saldo_negativo + precio * 0.75f);
 
-       if (tarjeta is MedioBoleto && tieneSaldoMedioBoleto)
-       {
+				if(tarjeta is MedioBoleto && tieneSaldoMedioBoleto && estaEnHora(tiempo))
+							 {
 
-          var ultimoViaje = tarjeta.historial.LastOrDefault();
+								var ultimoViaje = tarjeta.historial.LastOrDefault();
 
-                 if (ultimoViaje != null && pasaronCincoMinutos(ultimoViaje.fecha,tiempo) && tarjeta.ViajesHoy < 4){
-                  Console.WriteLine("5 minutos");
-                  precio *= 0.5f;
-                  tarjeta.ViajesHoy++;
-                 }
+								if (ultimoViaje != null && pasaronCincoMinutos(ultimoViaje.fecha,tiempo) && tarjeta.ViajesHoy < 4){
+									precio *= 0.5f;
+									tarjeta.ViajesHoy++;
+								}
 
-                 else if(ultimoViaje == null){
-                 Console.WriteLine("ultimo null");
-                 precio *= 0.5f;
-                 tarjeta.ViajesHoy++;
-                 } 
+								else if(ultimoViaje == null){
+									precio *= 0.5f;
+									tarjeta.ViajesHoy++;
+								} 
 
-       }
-       else if (tarjeta is BoletoGratuito && tarjeta.ViajesHoy < 2)
-       {
-                precio = 0;
-                tipo = "Boleto gratuito";
-                tarjeta.ViajesHoy++;
-       }
+							}
+
+							else if(tarjeta is BoletoGratuito && tarjeta.ViajesHoy<2 && estaEnHora(tiempo)){
+								precio = 0;
+								tarjeta.ViajesHoy++;  
+							}
 
         else if (tarjeta.historial.Count != 0)
             {
@@ -62,21 +57,18 @@ namespace TP_Colectivo
                 if (tarjeta.ViajesMes >= 0 && tarjeta.ViajesMes < 30 && tieneSaldoBoletoNormal)
                 {
                     precio = tarifa;
-                    tipo = "Boleto Normal";
                     tarjeta.ViajesMes++;
                 }
                 
                 else if (tarjeta.ViajesMes > 29 && tarjeta.ViajesMes < 80 && tieneSaldo20)
                 {
                     precio *= 0.80f;
-                    tipo = "Boleto Normal";
                     tarjeta.ViajesMes++;
                 }
             
                 else if (tarjeta.ViajesMes >= 80 && tieneSaldo25)
                 {
                     precio *= 0.75f;
-                    tipo = "Boleto Normal";
                     tarjeta.ViajesMes++;
                 }
                   
@@ -90,7 +82,6 @@ namespace TP_Colectivo
         else if (tarjeta.historial.Count == 0 && tieneSaldoBoletoNormal)
             {
                 precio = tarifa;
-                tipo = "Boleto Normal";
                 tarjeta.ViajesMes ++;
             }
            
@@ -116,20 +107,19 @@ namespace TP_Colectivo
                 tarjeta.RestarSaldo(precio);
         }
 
-      boleto = new Boleto(tarjeta.id,tipo,precio,Linea, tarjeta.VerSaldo(),tiempo.Now());
+      Boleto boleto = new Boleto(tarjeta.id,tarjeta.GetType().Name,precio,Linea, tarjeta.VerSaldo(),tiempo.Now());
       tarjeta.historial.Add(boleto);
       return boleto; 
-
     }
 
         private bool pasaronCincoMinutos(DateTime ultimoViaje, Tiempo tiempo){
-      if(DiferenciaMinutos(ultimoViaje,tiempo.Now()) > 5)
-        {
-            return true;
-        }
+          if(DiferenciaMinutos(ultimoViaje,tiempo.Now()) > 5)
+            {
+                return true;
+            }
 
-      return false;
-    }
+          return false;
+        }
 
         public static int DiferenciaMinutos(DateTime fechaInicio, DateTime fechaFin)
         {
@@ -137,7 +127,27 @@ namespace TP_Colectivo
             return (int)diferencia.TotalMinutes;
         }
 
+        private bool estaEnHora(Tiempo tiempo)
+        {
+            DateTime ahora = tiempo.Now();
+            DayOfWeek diaActual = ahora.DayOfWeek;
 
+            if (diaActual >= DayOfWeek.Monday && diaActual <= DayOfWeek.Friday)
+            {
+                TimeSpan horaActual = ahora.TimeOfDay;
+                TimeSpan inicio = new TimeSpan(6, 0, 0);
+                TimeSpan fin = new TimeSpan(22, 0, 0);
+
+                return horaActual >= inicio && horaActual <= fin;
+            }
+
+            return false;
+        }
+
+        public float VerTarifa()
+        {
+            return tarifa;
+        }
     }
 }
 
