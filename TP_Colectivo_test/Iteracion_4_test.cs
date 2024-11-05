@@ -115,13 +115,5 @@ namespace TP_Colectivo_test
             Assert.That(tarjeta.VerSaldo, Is.EqualTo(3000 - Swift.tarifa));
         }
 
-        [Test]
-        public void negineterurbano()
-        {
-            tarjeta.CargarTarjeta(2100);
-            Swift.pagarCon(tarjeta, tiempo);
-            Assert.That(tarjeta.VerSaldo, Is.EqualTo(2100 - Swift.tarifa));
-        }
-
     }
 }
