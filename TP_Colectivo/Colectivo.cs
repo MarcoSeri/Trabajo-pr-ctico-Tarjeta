@@ -9,7 +9,7 @@ namespace TP_Colectivo
   public class Colectivo{
     public string Linea;
     public float tarifa = 1200;
-    public float precio; //Esto tiene que estar en el archivo de cada coso
+    public float precio;
 
     public Colectivo(string linea){
       this.Linea = linea;
@@ -46,6 +46,10 @@ namespace TP_Colectivo
         else if(tarjeta is BoletoGratuito && tarjeta.ViajesHoy<2 && estaEnHora(tiempo)){
 	        precio = 0;
 	        tarjeta.ViajesHoy++;  
+        }
+
+        else if(tarjeta is BoletoJubilados && estaEnHora(tiempo)){
+	        precio = 0;
         }
 
         else if (tarjeta.historial.Count != 0)
