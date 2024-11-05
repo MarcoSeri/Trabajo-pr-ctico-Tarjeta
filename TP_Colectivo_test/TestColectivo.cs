@@ -1,15 +1,13 @@
-﻿using Newtonsoft.Json;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using TP_Colectivo;
 
 namespace TP_Colectivo_test
 {
-    public class Test4
+    public class TestColectivo
     {
         private TiempoFalso tiempo;
         private DateTime tiempoahora;
         private Colectivo q;
-        private ColectivoInterurbano Swift;
 
         private Tarjeta tarjeta;
         private Tarjeta medioBoleto;
@@ -25,12 +23,43 @@ namespace TP_Colectivo_test
             tarjeta = new Tarjeta(1974);
             medioBoleto = new MedioBoleto(2006);
             gratuitoBoleto = new BoletoGratuito(2077);
-            Swift = new ColectivoInterurbano("Expresso Swift");
             q = new Colectivo("Q");
-           
+
             tarifa = q.VerTarifa();
             medio = tarifa * 0.5f;
 
+        }
+
+        [Test]public void usofrecuente129()
+        {
+            tarjeta.setviajesmes(5);
+            tarjeta.CargarTarjeta(3000);
+            q.pagarCon(tarjeta, tiempo);
+            Assert.That(tarjeta.VerSaldo, Is.EqualTo(3000 - q.precio));
+            Assert.That(tarjeta.ViajesMes, Is.EqualTo(6));
+        }
+
+        [Test]
+        public void usofrecuente3079()
+        {
+
+            tarjeta.CargarTarjeta(3000);
+            q.pagarCon(tarjeta, tiempo);
+            tarjeta.setviajesmes(30);
+            q.pagarCon(tarjeta, tiempo);
+            Assert.That(tarjeta.VerSaldo, Is.EqualTo(3000 - (q.tarifa * 0.8f) - q.tarifa));
+            Assert.That(tarjeta.ViajesMes, Is.EqualTo(31));
+        }
+
+        [Test]
+        public void usofrecuente80()
+        {
+            tarjeta.CargarTarjeta(3000);
+            q.pagarCon(tarjeta, tiempo);
+            tarjeta.setviajesmes(88);
+            q.pagarCon(tarjeta, tiempo);
+            Assert.That(tarjeta.VerSaldo, Is.EqualTo(3000 - (q.tarifa * 0.75f) - q.tarifa));
+            Assert.That(tarjeta.ViajesMes, Is.EqualTo(89));
         }
 
         [Test]
@@ -63,57 +92,5 @@ namespace TP_Colectivo_test
 
             Assert.Pass();
         }
-
-        [Test]
-
-        public void usofrecuente129()
-        {
-            tarjeta.setviajesmes(5);
-            tarjeta.CargarTarjeta(3000);
-            q.pagarCon(tarjeta, tiempo);
-            Assert.That(tarjeta.VerSaldo, Is.EqualTo(3000 - q.precio));
-            Assert.That(tarjeta.ViajesMes, Is.EqualTo(6));
-        }
-
-        [Test]
-
-        public void usofrecuente3079()
-        {
-
-            tarjeta.CargarTarjeta(3000);
-            q.pagarCon(tarjeta, tiempo);
-            tarjeta.setviajesmes(30);
-            q.pagarCon(tarjeta, tiempo);
-            Assert.That(tarjeta.VerSaldo, Is.EqualTo(3000 - (q.tarifa * 0.8f) - q.tarifa));
-            Assert.That(tarjeta.ViajesMes, Is.EqualTo(31));
-        }
-
-        [Test]
-        public void checkeomes()
-        {
-            tarjeta.setviajesmes(88);
-            Assert.That(tarjeta.ViajesMes, Is.EqualTo(88));
-        }
-
-
-        [Test]
-        public void usofrecuente80()
-        {
-            tarjeta.CargarTarjeta(3000);
-            q.pagarCon(tarjeta, tiempo);
-            tarjeta.setviajesmes(88);
-            q.pagarCon(tarjeta, tiempo);
-            Assert.That(tarjeta.VerSaldo, Is.EqualTo(3000 - (q.tarifa * 0.75f) - q.tarifa));
-            Assert.That(tarjeta.ViajesMes, Is.EqualTo(89));
-        }
-
-        [Test]
-        public void interurbano()
-        {
-            tarjeta.CargarTarjeta(3000);
-            Swift.pagarCon(tarjeta, tiempo);
-            Assert.That(tarjeta.VerSaldo, Is.EqualTo(3000 - Swift.tarifa));
-        }
-
     }
 }
