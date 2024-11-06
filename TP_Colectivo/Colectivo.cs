@@ -8,8 +8,8 @@ namespace TP_Colectivo
 {
   public class Colectivo{
     public string Linea;
-    public float tarifa = 1200;
-    public float precio;
+    protected float tarifa = 1200;
+    private float precio;
 
     public Colectivo(string linea){
       this.Linea = linea;

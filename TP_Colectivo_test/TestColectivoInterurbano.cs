@@ -36,7 +36,7 @@ namespace TP_Colectivo_test
         {
             tarjeta.CargarTarjeta(3000);
             Swift.pagarCon(tarjeta, tiempo);
-            Assert.That(tarjeta.VerSaldo, Is.EqualTo(3000 - Swift.tarifa));
+            Assert.That(tarjeta.VerSaldo, Is.EqualTo(3000 - tarifa));
         }
     }
 }

@@ -13,9 +13,6 @@ namespace TP_Colectivo_test
         private DateTime tiempoahora;
         private Colectivo q;
 
-
-        private Tarjeta tarjeta;
-        private Tarjeta medioBoleto;
         private Tarjeta gratuitoBoleto;
 
         private float tarifa;
@@ -25,9 +22,8 @@ namespace TP_Colectivo_test
         public void Setup()
         {
             tiempo = new TiempoFalso();
-            tarjeta = new Tarjeta(1974);
-            medioBoleto = new MedioBoleto(2006);
             gratuitoBoleto = new BoletoGratuito(2077);
+
             q = new Colectivo("Q");
 
             tarifa = q.VerTarifa();
@@ -38,10 +34,10 @@ namespace TP_Colectivo_test
         [Test]
         public void LimitacionPagoFranquiciasCompletas()
         {
-            gratuitoBoleto.setear(4000);
-
+            //Hacer que sea hora disponible
             tiempo.AgregarMinutos(600);
 
+            gratuitoBoleto.setear(4000);
             q.pagarCon(gratuitoBoleto, tiempo);
             tiempo.AgregarMinutos(10);
             q.pagarCon(gratuitoBoleto, tiempo);

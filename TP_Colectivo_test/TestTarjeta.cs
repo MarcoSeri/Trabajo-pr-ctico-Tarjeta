@@ -22,6 +22,8 @@ namespace TP_Colectivo_test
             q = new Colectivo("Q");
             tarifa = q.VerTarifa();
         }
+
+        [Test]
         public void chequeo_saldo()
         {
             tarjeta.CargarTarjeta(2000);
@@ -64,6 +66,7 @@ namespace TP_Colectivo_test
 
             Assert.Pass();
         }
+
         [Test]
         public void chequeo_saldonegativo()
         {
@@ -83,7 +86,7 @@ namespace TP_Colectivo_test
         }
 
         [Test]
-        public void SaldoDeLaTarjeta()
+        public void FuncionaElCredito()
         {
             tarjeta.setear(35000);
             tarjeta.CargarTarjeta(4000);
@@ -106,7 +109,7 @@ namespace TP_Colectivo_test
         }
 
         [Test]
-        public void checkeomes()
+        public void checkeoMes()
         {
             tarjeta.setviajesmes(88);
             Assert.That(tarjeta.ViajesMes, Is.EqualTo(88));
